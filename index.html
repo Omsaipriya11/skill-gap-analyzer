@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillGap Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>◆</span> SkillGap
+        </div>
+
+        <div class="nav-tag">
+            Career Readiness Analyzer
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div>
+                <p class="eyebrow">CAREER INTELLIGENCE</p>
+
+                <h1>
+                    Discover what stands<br>
+                    <span>between you & your dream role.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Compare your current skills with the skills required
+                    for your target career and build a clear learning path.
+                </p>
+            </div>
+
+            <div class="hero-badge">
+                <div class="badge-icon">✦</div>
+                <strong>Smart Analysis</strong>
+                <span>Instant results</span>
+            </div>
+        </section>
+
+        <!-- Input Section -->
+        <section class="analysis-card">
+
+            <div class="section-title">
+                <div class="number">01</div>
+                <div>
+                    <h2>Choose your target role</h2>
+                    <p>What career are you preparing for?</p>
+                </div>
+            </div>
+
+            <div class="role-grid">
+
+                <button class="role-btn active" data-role="Full Stack Developer">
+                    <span class="role-icon">⌘</span>
+                    <span>
+                        <strong>Full Stack Developer</strong>
+                        <small>Frontend + Backend</small>
+                    </span>
+                </button>
+
+                <button class="role-btn" data-role="Cloud Engineer">
+                    <span class="role-icon">☁</span>
+                    <span>
+                        <strong>Cloud Engineer</strong>
+                        <small>Cloud + Infrastructure</small>
+                    </span>
+                </button>
+
+                <button class="role-btn" data-role="Frontend Developer">
+                    <span class="role-icon">◫</span>
+                    <span>
+                        <strong>Frontend Developer</strong>
+                        <small>UI + Web Development</small>
+                    </span>
+                </button>
+
+                <button class="role-btn" data-role="Backend Developer">
+                    <span class="role-icon">▣</span>
+                    <span>
+                        <strong>Backend Developer</strong>
+                        <small>APIs + Databases</small>
+                    </span>
+                </button>
+
+                <button class="role-btn" data-role="DevOps Engineer">
+                    <span class="role-icon">⚙</span>
+                    <span>
+                        <strong>DevOps Engineer</strong>
+                        <small>CI/CD + Automation</small>
+                    </span>
+                </button>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section-title">
+                <div class="number">02</div>
+                <div>
+                    <h2>Rate your current skills</h2>
+                    <p>Be honest — your results become more useful.</p>
+                </div>
+            </div>
+
+            <div class="skills-container" id="skillsContainer"></div>
+
+            <div class="action-area">
+                <button class="analyze-btn" id="analyzeBtn">
+                    Analyze My Skill Gap
+                    <span>→</span>
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Results -->
+        <section class="results-section hidden" id="resultsSection">
+
+            <div class="result-heading">
+                <div>
+                    <p class="eyebrow">YOUR ANALYSIS</p>
+                    <h2 id="resultRole">Full Stack Developer</h2>
+                </div>
+
+                <button class="reset-btn" id="resetBtn">
+                    ↻ New Analysis
+                </button>
+            </div>
+
+            <!-- Score -->
+            <div class="score-grid">
+
+                <div class="score-card main-score">
+                    <p>READINESS SCORE</p>
+
+                    <div class="score-circle">
+                        <div>
+                            <strong id="scoreValue">0</strong>
+                            <span>/100</span>
+                        </div>
+                    </div>
+
+                    <h3 id="scoreMessage">Keep building!</h3>
+
+                    <p id="scoreDescription">
+                        Your analysis is ready.
+                    </p>
+                </div>
+
+                <div class="mini-stats">
+
+                    <div class="stat-card">
+                        <span class="stat-icon good">✓</span>
+                        <div>
+                            <strong id="strongCount">0</strong>
+                            <p>Strong Skills</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon improve">↗</span>
+                        <div>
+                            <strong id="improveCount">0</strong>
+                            <p>Skills to Improve</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <span class="stat-icon missing">!</span>
+                        <div>
+                            <strong id="missingCount">0</strong>
+                            <p>Critical Gaps</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Skills Breakdown -->
+            <div class="breakdown-card">
+
+                <div class="card-heading">
+                    <div>
+                        <p class="eyebrow">SKILL BREAKDOWN</p>
+                        <h2>Where you stand</h2>
+                    </div>
+                </div>
+
+                <div id="skillResults"></div>
+
+            </div>
+
+            <!-- Roadmap -->
+            <div class="roadmap-card">
+
+                <div class="card-heading">
+                    <div>
+                        <p class="eyebrow">YOUR NEXT MOVE</p>
+                        <h2>Recommended Learning Roadmap</h2>
+                    </div>
+                </div>
+
+                <div id="roadmap"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>SkillGap Analyzer • Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
